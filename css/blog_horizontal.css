@@ -1,0 +1,239 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lora', serif;
+  background: linear-gradient(135deg, #0f1b2b, #1e2a3a);
+  color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Animación de aparición suave para la página */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animación de entrada para el título */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Cabecera */
+.header {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-title {
+  font-family: 'Lora', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00b0ff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  animation: slideIn 1s ease-out; /* Aplica la animación de entrada */
+}
+
+.search-container {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+}
+
+#search-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50px;
+  background: #141e30;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  outline: none;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+#search-input::placeholder {
+  color: #b0c4de;
+  font-size: 1rem;
+}
+
+#search-input:focus {
+  background-color: #1e2a3a;
+  box-shadow: 0 0 20px rgba(0, 176, 255, 0.8);
+}
+
+.search-container::after {
+  content: '\1F50D';
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: #b0c4de;
+  pointer-events: none;
+}
+
+/* Contenedor */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  width: 90%;
+  max-width: 1400px;
+  padding: 2rem 0;
+}
+
+/* Tarjeta */
+.card {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  min-height: 500px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease-in-out;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+  opacity: 0;
+  animation: cardFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes cardFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.card:hover {
+  transform: translateY(-20px) scale(1.07);
+  box-shadow: 0 40px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 140, 255, 0.8);
+}
+
+.card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(60%);
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+  padding: 3rem;
+  text-align: center;
+  color: #fff;
+}
+
+.card-content h1 {
+  font-family: 'Lora', serif;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #00b0ff;
+  transition: transform 0.3s ease;
+}
+
+.card-content p {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: #b0c4de;
+}
+
+.tags {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  opacity: 0.7;
+  font-size: 0.8rem;
+  transition: opacity 0.3s ease;
+}
+
+.tags:hover {
+  opacity: 1;
+}
+
+.tag {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #b0c4de;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background-color: #00b0ff;
+  color: #fff;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: #141e30;
+  background: #00b0ff;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 20px rgba(0, 140, 255, 0.6);
+}
+
+/* Pie de página */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  background: #141e30;
+  color: #b0c4de;
+}
+
+.footer a {
+  color: #00b0ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
