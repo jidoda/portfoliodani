@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Portfolio de Daniel Jiménez</title>
-  <link href="https://jidoda.github.io/portfoliodani/"/>
+  <link href="https://jidoda.github.io/portfoliodani/" />
+  <link href="https://jidoda.github.io/portfoliodani/atom.xml" rel="self" type="application/atom+xml" />
   <updated>2025-05-14T12:00:00+01:00</updated>
   <author>
     <name>Daniel Jiménez</name>
@@ -12,7 +13,7 @@
   <entry>
     <title>Base de Datos</title>
     <link href="https://jidoda.github.io/portfoliodani/paginas/basedatos.html"/>
-    <id>basedatos</id>
+    <id>https://jidoda.github.io/portfoliodani/paginas/basedatos.html</id>
     <updated>2025-05-14T12:10:00+01:00</updated>
     <summary>Contenido sobre bases de datos y conceptos fundamentales de SQL.</summary>
   </entry>
@@ -20,7 +21,7 @@
   <entry>
     <title>Implantación de Sistemas Operativos</title>
     <link href="https://jidoda.github.io/portfoliodani/paginas/implantacion.html"/>
-    <id>implantacion</id>
+    <id>https://jidoda.github.io/portfoliodani/paginas/implantacion.html</id>
     <updated>2025-05-14T12:15:00+01:00</updated>
     <summary>Material relacionado con la instalación y configuración de sistemas operativos.</summary>
   </entry>
@@ -28,7 +29,7 @@
   <entry>
     <title>Lenguaje de Marcas</title>
     <link href="https://jidoda.github.io/portfoliodani/paginas/lenguaje.html"/>
-    <id>lenguaje</id>
+    <id>https://jidoda.github.io/portfoliodani/paginas/lenguaje.html</id>
     <updated>2025-05-14T12:20:00+01:00</updated>
     <summary>Estudio sobre HTML, CSS, XML y su aplicación práctica.</summary>
   </entry>
@@ -36,7 +37,7 @@
   <entry>
     <title>Planificación</title>
     <link href="https://jidoda.github.io/portfoliodani/paginas/planificacion.html"/>
-    <id>planificacion</id>
+    <id>https://jidoda.github.io/portfoliodani/paginas/planificacion.html</id>
     <updated>2025-05-14T12:25:00+01:00</updated>
     <summary>Planificación y organización de proyectos en ASIR.</summary>
   </entry>
@@ -44,8 +45,9 @@
   <entry>
     <title>Proyecto Personal</title>
     <link href="https://jidoda.github.io/portfoliodani/paginas/proyecto.html"/>
-    <id>proyecto</id>
+    <id>https://jidoda.github.io/portfoliodani/paginas/proyecto.html</id>
     <updated>2025-05-14T12:30:00+01:00</updated>
     <summary>Sección dedicada a mi proyecto personal con HTML, CSS y JS.</summary>
   </entry>
 </feed>
+
